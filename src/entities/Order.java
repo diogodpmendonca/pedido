@@ -52,4 +52,17 @@ public class Order {
 		}
 		return sum;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		Client c = new Client();
+		sb.append("Momento da Compra: "+moment);
+		sb.append("Status da Compra: "+status);
+		sb.append(c.toString());
+		sb.append("Itens da Compra");
+		for(OrderItem item: items) {
+			sb.append(item.toString());
+		}
+		return sb.toString();
+	}
 }

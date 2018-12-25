@@ -28,4 +28,11 @@ public class OrderItem {
 	public Double Subtotal() {
 		return quantity * price;
 	}
+
+	@Override
+	public String toString() {
+		return "OrderItem [quantity=" + quantity + ", price=" + price + "]";
+	}
+	
+	
 }

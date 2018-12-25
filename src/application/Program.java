@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import entities.Client;
 import entities.Order;
+import entities.OrderItem;
 import entities.Product;
 import entities.enums.OrderStatus;
 
@@ -33,17 +34,18 @@ public class Program {
 		System.out.println("Informe os dados dessa ordem de compra");
 		
 		System.out.println("Status: ");
+		sc.nextLine();
 		String status = sc.nextLine();
 	
 		Order compra = new Order(OrderStatus.valueOf(status));
 				
 		System.out.println("Quantos itens essa ordem de compra possui ?");
 		int n = sc.nextInt();
-		sc.nextLine();
 		
 		for(int i=0; i<n; i++) {
 			System.out.println("Informe os dados do item #"+i+1);
 			System.out.println("Nome do produto: ");
+			sc.nextLine();
 			String nomeP = sc.nextLine();
 			System.out.println("Preço do produto");
 			Double priceP = sc.nextDouble();
@@ -52,9 +54,13 @@ public class Program {
 			System.out.println("Quantidade: ");
 			int quantidadeItem = sc.nextInt();
 			
+			OrderItem item = new OrderItem(quantidadeItem, priceP);
 			
-			sc.nextLine();
+			compra.addItem(item);
+			
 		}
+		
+		System.out.println(compra.toString());
 		
 		sc.close();
 

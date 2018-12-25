@@ -13,6 +13,10 @@ public class Client {
 		this.birthdate = birthdate;
 	}
 
+	public Client() {
+		
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -36,6 +40,10 @@ public class Client {
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Client [nome=" + nome + ", email=" + email + ", birthdate=" + birthdate + "]";
+	}
 	
 }
