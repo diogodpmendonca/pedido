@@ -25,5 +25,7 @@ public class OrderItem {
 		this.price = price;
 	}
 	
-	
+	public Double Subtotal() {
+		return quantity * price;
+	}
 }
