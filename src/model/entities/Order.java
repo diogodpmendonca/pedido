@@ -72,7 +72,7 @@ public class Order {
 		sb.append("Momento da Compra: "+sdf.format(moment)+"\n");
 		sb.append("Status da Compra: "+status+"\n");
 		sb.append("Cliente"+client.toString()+"\n");
-		sb.append("Itens da Compra");
+		sb.append("Itens da Compra:\n");
 		for(OrderItem item: items) {
 			sb.append(item.toString()+"\n");
 		}

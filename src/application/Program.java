@@ -35,15 +35,15 @@ public class Program {
 		
 		System.out.println("Status: ");
 		sc.nextLine();
-		String status = sc.nextLine();
+		OrderStatus status = OrderStatus.valueOf(sc.nextLine());
 	
-		Order compra = new Order(OrderStatus.valueOf(status));
+		Order compra = new Order(new Date(), status, cliente);
 				
 		System.out.println("Quantos itens essa ordem de compra possui ?");
 		int n = sc.nextInt();
 		
 		for(int i=0; i<n; i++) {
-			System.out.println("Informe os dados do item #"+i+1);
+			System.out.println("Informe os dados do item #"+(i+1));
 			System.out.println("Nome do produto: ");
 			sc.nextLine();
 			String nomeP = sc.nextLine();
@@ -54,7 +54,7 @@ public class Program {
 			System.out.println("Quantidade: ");
 			int quantidadeItem = sc.nextInt();
 			
-			OrderItem item = new OrderItem(quantidadeItem, priceP);
+			OrderItem item = new OrderItem(quantidadeItem, priceP, produto);
 			
 			compra.addItem(item);
 			
