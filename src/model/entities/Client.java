@@ -7,9 +7,9 @@ public class Client {
 	
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
-	String nome;
-	String email;
-	Date birthdate;
+	private String nome;
+	private String email;
+	private Date birthdate;
 	
 	public Client(String nome, String email, Date birthdate) {
 		this.nome = nome;

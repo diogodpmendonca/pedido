@@ -1,8 +1,9 @@
 package model.entities;
 
 public class Product {
-	String name;
-	Double price;
+	
+	private String name;
+	private Double price;
 	
 	public Product(String name, Double price) {
 		this.name = name;
